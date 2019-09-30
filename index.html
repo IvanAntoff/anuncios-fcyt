@@ -5,8 +5,7 @@
 
     <!-- estilo y manifiesto -->
     <link rel='manifest' href='manifest.json'>
-    <link rel="stylesheet" href="theme.css">
-    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
 
     <!-- metadata -->
     <meta charset="utf-8">
@@ -35,7 +34,7 @@
 -->
     <script type="text/javascript" src="IniciarServiceWorker.js"></script>
 
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <!--   <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script> -->
 
     <script>
         var OneSignal = window.OneSignal || [];
@@ -53,7 +52,7 @@
         <!-- Cebecera -->
 
         <div id="Cabecera">
-            <a href="index.html"><img src="imgs/cabecera.webp" class="CentrarVertical" style="width: 65%;" alt=""></a>
+            <a href="index.html"><img src="images/assents/header.png" class="CentrarVertical" style="width: 65%;" alt=""></a>
         </div>
     </header>
 </head>
@@ -63,18 +62,16 @@
         <div id="Cuerpo">
             <div id="MenuOpciones">
                 <nav>
-                    <ul class="BotonesMenu">
-                        <li><a href="https://infocdelu.com/">Visitar Infocdelu.com</a></li>
-                        <li><a href="https://m.facebook.com/Radio10FM97.5/">Visitar nuestro facebook</a></li>
-                        <li><a href="media.html">Transmisiones en vivo</a></li>
-                    </ul>
+
                 </nav>
             </div>
         </div>
         <footer>
             <div id="footer">
-                <audio class="CentrarVertical" controls="enable" autoplay="1"> <source src="" type="audio/mpegURL">
-	        	</audio>
+                <button onclick="window.location='https://twitter.com/Ivan_Antoff'" class="SocialButton tw-button"></button>
+                <button onclick="window.location='https://www.instagram.com/Ivan.Antoff'" class="SocialButton ig-button"></button>
+                <button onclick="window.location='https://www.facebook.com/Ivan.Antoff'" class="SocialButton fb-button"></button>
+                <button onclick="window.location='https://github.com/IvanAntoff/'" class="SocialButton gh-button"></button>
             </div>
         </footer>
     </main>
