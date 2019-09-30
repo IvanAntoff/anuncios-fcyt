@@ -1,3 +1,10 @@
+/* Principal*/
+
+header {
+    width: auto;
+    height: auto;
+}
+
 body {
     background: #ffffff;
     background-position: center top;
@@ -18,90 +25,91 @@ body {
     }
 }
 
-audio:hover,
-audio:focus,
-audio:active {
-    -webkit-transform: scale(1.01);
-    -moz-transform: scale(1.01);
-    transform: scale(1.01);
-}
+/* Cuerpo */
 
-audio {
-    padding-top: 1em;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-    -moz-border-radius: 7px;
-    -webkit-border-radius: 7px;
-    -o-border-radius: 7px;
-    border-radius: 7px;
-    max-width: 600px;
-    width: 20vw;
-    width: 80%;
-}
-
-#Cabecera {
-    width: auto;
-    height: auto;
-}
-
-#Cuerpo {
-    margin-top: 6em;
+#CajaCentral {
+    align-content: center;
     min-width: 160;
     min-height: 400;
 }
 
-#MenuOpcioones {
+#Anuncios {
     min-width: 160;
     min-height: 400;
 }
+
+/* Stands */
+
+
+
+/* Footer */
 
 #footer {
     position: fixed;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-bottom: 2%;
-    padding-top: 90%;
-}
-
-ul.BotonesMenu {
-    border-bottom: none;
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    min-width: 160px;
-    min-height: 80px;
-    max-width: 600px;
-    max-height: 200px;
-}
-
-ul.BotonesMenu li {
-    background-color: rgba(230, 230, 230, 0.7);
-    border-bottom: 4px solid #7C7C7C;
-    border-radius: 30px;
-    min-width: 160px;
-    min-height: 50px;
-    margin-bottom: 1em;
-}
-
-ul.BotonesMenu li a {
-    color: #333;
-    display: block;
-    padding: .2em 0 .2em .5em;
-    text-decoration: none;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     text-align: center;
-    font-size: 4vh;
+  }
+
+/* Footer redes*/
+
+.SocialDiv {
+    vertical-align: center;
+    background: rgba(0, 60, 255, 1);
+    width: 100%;
+    margin-bottom: 5%;
 }
 
-.BotonesMenu li:hover {
-    background-color: #CF1E25;
-    color: white;
-    border-bottom: 4px solid #333;
-    -webkit-transform: scale(1.01);
-    -moz-transform: scale(1.01);
-    transform: scale(1.01);
+#SocialButton {
+    display: inline-block;
+    height: 54px;
+    width: 54px;
+    border-radius: 8px;
+    margin: 1%; 
+    }
+
+#SocialButton.gh-button {
+    background: #ffffff url(images/icons/GH2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 44px 44px;
 }
+
+#SocialButton.fb-button {
+    background: #ffffff url(images/icons/FB2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 44px 44px;
+}
+
+#SocialButton.ig-button {
+    background: #ffffff url(images/icons/IG2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 44px 44px;
+}
+
+#SocialButton.tw-button {
+    background: #ffffff url(images/icons/TW2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 44px 44px;
+}
+
+ /* Otros */
+.CentrarVertical {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.CentrarHorizontal {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 
 .BotonInstalar {
     width: 30%;
@@ -131,50 +139,4 @@ ul.BotonesMenu li a {
     -webkit-transform: scale(1.01);
     -moz-transform: scale(1.01);
     transform: scale(1.01);
-}
-
-.CentrarVertical {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.SocialButton {
-    background: rgba(0, 13, 128, 0.5);
-}
-
-.gh-button {
-    background: url(images/icons/GH2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 44px 44px;
-    height: 54px;
-    width: 54px;
-}
-
-.fb-button {
-    background: url(images/icons/FB2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 44px 44px;
-    height: 54px;
-    width: 54px;
-}
-
-.ig-button {
-    background: url(images/icons/IG2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 44px 44px;
-    height: 54px;
-    width: 54px;
-}
-
-.tw-button {
-    background: url(images/icons/TW2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 44px 44px;
-    height: 54px;
-    width: 54px;
 }
