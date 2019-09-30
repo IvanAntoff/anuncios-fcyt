@@ -7,36 +7,44 @@ header {
 
 body {
     background: #ffffff;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-color: #464646;
     overflow-y: hidden;
-    height: 100%;
 }
 
-@media only screen and (max-width: 767px) {
-    body {
-        background: #ffffff;
-    }
-}
 
 /* Cuerpo */
 
 #CajaCentral {
-    align-content: center;
     min-width: 160;
     min-height: 400;
+    margin: auto;
+    width: 90%;
+    border: 3px solid green;
+    padding: 10px;
+    margin-top: 10%;
+
 }
 
 #Anuncios {
     min-width: 160;
     min-height: 400;
+    width: 100%;
 }
+
+/* Tabla */
+
+table {
+    background: aqua;
+    width: 100%;
+}
+
+th {
+    background: #CF1E25
+}
+
+tr {
+    background: #7C7C7C
+}
+
 
 /* Stands */
 
@@ -102,14 +110,15 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 50%;
 }
 
-.CentrarHorizontal {
-    display: block;
-    margin-top: auto;
-    margin-bottom: auto;
+.ImgCabecera {
+    width: auto;
+    height: auto;
+    max-width: 600px;
+    max-height: 200px;
 }
-
 
 .BotonInstalar {
     width: 30%;
