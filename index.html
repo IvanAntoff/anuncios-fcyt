@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- estilo y manifiesto -->
+    <link rel='manifest' href='manifest.json'>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Todas las noticias, un solo lugar...">
+
+    <!-- Favicons -->
+    <link rel="icon" href="imgs/logo.webp">
+    <link rel="apple-touch-icon" sizes="57x57" href="imgs/iconos/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="imgs/iconos/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="imgs/iconos/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="imgs/iconos/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="imgs/iconos/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="imgs/iconos/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="imgs/iconos/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="imgs/iconos/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/iconos/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/iconos/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/iconos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="imgs/iconos/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="imgs/iconos/android-icon-192x192.png">
+    <meta name="msapplication-TileImage" content="imgs/iconos/ms-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#C10000">
+
+    <script type="text/javascript" src="IniciarServiceWorker.js"></script>
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "86127c3e-e72b-46bd-aa49-8f5e9e1b25b9",
+            });
+        });
+    </script>
+
+    <header>
+        <!-- Titulo -->
+        <title>Infocdelu.com</title>
+
+        <!-- Cebecera -->
+
+        <div id="Cabecera">
+            <a href="index.html"><img src="imgs/cabecera.webp" class="CentrarVertical" style="width: 65%;" alt=""></a>
+        </div>
+    </header>
+</head>
+
+<body>
+    <main>
+        <div id="Cuerpo">
+            <div id="MenuOpciones">
+                <nav>
+                    <ul class="BotonesMenu">
+                        <li><a href="https://infocdelu.com/">Visitar Infocdelu.com</a></li>
+                        <li><a href="https://m.facebook.com/Radio10FM97.5/">Visitar nuestro facebook</a></li>
+                        <li><a href="media.html">Transmisiones en vivo</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <footer>
+            <div id="footer">
+                <audio class="CentrarVertical" controls="enable" autoplay="1"> <source src="" type="audio/mpegURL">
+	        	</audio>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
