@@ -8,4 +8,4 @@ if ('serviceWorker' in navigator) {
       console.log('ServiceWorker error durante el registro: ', err);
     });
   });
-}
+}o
