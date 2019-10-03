@@ -1,14 +1,30 @@
 {
   "name": "anuncios-fcyt-master",
-  "version": "1.0.0",
-  "description": "",
-  "main": "",
+  "version": "0.2.0",
+  "description": "Recordatorios reelevantes sobre FCYT UADER en la expo industrial!",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Antoff Ivan - Costantini Francisco",
+  "license": "GPL-3.0",
   "dependencies": {
+    "express": "^4.17.1",
     "firebase-tools": "^7.4.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanAntoff/fcyt.github.io.git"
+  },
+  "keywords": [
+    "pwa",
+    "json",
+    "express",
+    "heroku"
+  ],
+  "bugs": {
+    "url": "https://github.com/IvanAntoff/fcyt.github.io/issues"
+  },
+  "homepage": "https://github.com/IvanAntoff/fcyt.github.io#readme"
 }
