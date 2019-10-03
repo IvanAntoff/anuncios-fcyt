@@ -29,4 +29,15 @@ var date2 = new Date(jsonDate2);
 */
 
 const database = require('../database/database');
-console.log(database.getEvents());
+let ObjectDB = database.getEvents();
+let Linea = '';
+//console.log(ObjectDB)
+
+function ImprimirEventos(DB){
+    for (i = 0; i < DB.length; i++) {
+        Linea += DB[i] + "<br>";
+      }
+      document.getElementById("TaVolatil").innerHTML = text; 
+}
+
+ImprimirEventos(ObjectDB)

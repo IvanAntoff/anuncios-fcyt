@@ -1,6 +1,6 @@
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', function() {
-		navigator.serviceWorker.register('service-worker.js').then(
+		navigator.serviceWorker.register('./service-worker.js').then(
 			//nota para el desarrollador, upgradea esto kbza, movelo a js.Registro
 			function(registration) {
 				// Registro exitoso.

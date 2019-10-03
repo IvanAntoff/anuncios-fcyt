@@ -1,0 +1,24 @@
+{
+	"events": [
+		{
+			"stand": 2,
+			"msg": "la lorem ipsumeada",
+			"date": "October 1, 2019 18:30:00 UTC"
+		},
+		{
+			"stand": 1,
+			"msg": "Pelea de sumobots",
+			"date": "October 2, 2019 20:30:00 UTC"
+		},
+		{
+			"stand": 1,
+			"msg": "Ricardo Darin",
+			"date": "October 3, 2019 18:30:00 UTC"
+		},
+		{
+			"stand": 2,
+			"msg": "Demostración IA",
+			"date": "October 4, 2019 20:30:00 UTC"
+		}
+	]
+}
