@@ -1,16 +1,21 @@
 'use strict';
 
-var CACHE = 'Anuncios FCYT v0.2.0';
+var CACHE = 'Anuncios FCYT v0.9.9';
 var urlsToCache = [
 	'./',
 	'./index.html',
+	'./manifest.json',
 	'/assets/js/OneSignalSDKUpdaterWorker.js',
 	'/assets/js/OneSignalSDKWorker.js',
-	'/assets/js/date.js',
+	'/assets/js/gets.js',
+	'/assets/js/jquery.js',
+	'/assets/js/IniciarServiceWorker.js',
 	'/assets/css/style.css',
-	'/assets/database/database.js',
-	'/assets/database/data.json', 					//nota para el desarrollador, upgradea esto kbza
+	'/assets/css/w3.css',
+	'/assets/css/font-awesome.css',
+	'/assets/database/data.json', 					
 	'/assets/images/assents/header.png' 			//nota para el desarrollador, upgradea esto kbza
+
 ];
 
 self.addEventListener('install', function(event) {
