@@ -33,11 +33,13 @@ let ObjectDB = database.getEvents();
 let Linea = '';
 //console.log(ObjectDB)
 
-function ImprimirEventos(DB){
-    for (i = 0; i < DB.length; i++) {
-        Linea += DB[i] + "<br>";
+function ImprimirEventos(ObjectDB){
+    for (i = 0; i < ObjectDB.length; i++) {
+          console.log(ObjectDB[i])
+          console.log('...................................')
+      //        Linea += DB[i] + "<br>";
       }
-      document.getElementById("TaVolatil").innerHTML = text; 
+//      document.getElementById("TaVolatil").innerHTML = text; 
 }
 
 ImprimirEventos(ObjectDB)
