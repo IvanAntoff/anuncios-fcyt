@@ -187,13 +187,15 @@ ValidarFechaDia(ValidacionFecha, EventoDia);
 
 console.log(this.EventoDia, this.ValidacionFecha);
 
-if (this.ValidacionFecha == true) {
-    AnunciosStand1();
-    AnunciosStand2();
-}
-else {
-    $('#Anuncio1').html("La expo industrial de C. Del U. ha finalizado.");
-    $('#Stand1').html("¡Muchas gracias por visitarnos!");
-    $('#Anuncio2').html("Atte: La facultad de Ciencia y Tecnologia de UADER C. Del U.");
-    $('#Stand2').html("Esperamos haya disfrutado el evento.");
+window.onload = function MostrarAnuncios(){
+    if (this.ValidacionFecha == true) {
+        AnunciosStand1();
+        AnunciosStand2();
+    }
+    else {
+        $('#Anuncio1').html("La expo industrial de C. Del U. ha finalizado.");
+        $('#Stand1').html("¡Muchas gracias por visitarnos!");
+        $('#Anuncio2').html("Atte: La facultad de Ciencia y Tecnologia de UADER C. Del U.");
+        $('#Stand2').html("Esperamos haya disfrutado el evento.");
+    }
 }

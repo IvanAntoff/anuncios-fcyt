@@ -5,47 +5,88 @@ header {
 	height: auto;
 }
 
-body {
-	background: #ffffff;
-	overflow-y: hidden;
+.header-img {
+	width: auto;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-height: 200px;
+	max-width: 100%;
 }
 
-/* Cuerpo */
+body {
+	background: #ffffff;
+}
 
-#CajaCentral {
+footer {
+	bottom: 0;
+	text-align: center;
+	margin-top: 10%;
+}
+
+/*			Menu				*/
+
+
+ /* Style the navigation menu */
+ .topnav {
+	overflow: hidden;
+	background-color: #1b4173;
+	position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #links {
+	display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+	color: white;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+	background: url(../images/icons/menu.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	display: block;
+	position: absolute;
+	height: 30%;
+	margin-right: 1%;
+	margin-top: 12px;
+	right: 0;
+	top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+	background-color: #ececec;
+	color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+	background-color: #187eb2;
+	color: white;
+  } 
+
+  /*			Cuerpo				
+
+  #CajaCentral {
 	min-width: 160;
 	min-height: 400;
 	margin: auto;
 	width: 90%;
-	border: 3px solid green;
 	padding: 10px;
 	margin-top: 10%;
-}
+}*/
 
-#Anuncios {
-	min-width: 160;
-	min-height: 400;
-	width: 100%;
-}
-
-/* Tabla */
-
-table {
-	background: aqua;
-	width: 100%;
-}
-
-th {
-	background: #cf1e25;
-}
-
-tr {
-	background: #7c7c7c;
-}
-
-/* Stands */
-
-/* Footer */
+/*			Footer				*/
 
 #footer {
 	position: fixed;
@@ -55,67 +96,55 @@ tr {
 	text-align: center;
 }
 
-/* Footer redes*/
+/*			Footer redes	*/
+.w3-container{
+	padding-top: 100%;
+	margin-bottom: 0%;
+	bottom: 0;	
+}
 
-.SocialDiv {
-	vertical-align: center;
-	background: rgba(0, 60, 255, 1);
-	width: 100%;
-	margin-bottom: 5%;
+.uader-lightblue {
+	background-color: #187eb2;
+	color: #ffffff;
+}
+
+.uader-darkblue {
+	background-color: #1b4173;
+	color: #ffffff;
+}
+#line-footer{
+	padding-top: 2%;
 }
 
 #SocialButton {
 	display: inline-block;
-	height: 54px;
-	width: 54px;
+	height: 34px;
+	width: 34px;
 	border-radius: 8px;
 	margin: 1%;
 }
 
-#SocialButton.gh-button {
-	background: #ffffff url(../images/icons/GH2.png);
+#SocialButton.ig-button {
+	background: #ffffffe0 url(../images/icons/insta.png);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 44px 44px;
+	background-size: 24px 24px;
 }
 
 #SocialButton.fb-button {
-	background: #ffffff url(../images/icons/FB2.png);
+	background: #ffffffe0 url(../images/icons/face.png);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 44px 44px;
+	background-size: 24px 24px;
 }
 
-#SocialButton.ig-button {
-	background: #ffffff url(../images/icons/IG2.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 44px 44px;
-}
 
-#SocialButton.tw-button {
-	background: #ffffff url(../images/icons/TW2.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 44px 44px;
-}
-
-/* Otros */
+/*			Otros			*/
 .CentrarVertical {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
-}
-
-.header-img {
-	width: auto;
-	height: auto;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	max-height: 200px;
-	max-width: 100%;
 }
 
 .BotonInstalar {
