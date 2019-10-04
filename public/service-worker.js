@@ -5,8 +5,6 @@ var urlsToCache = [
 	'./',
 	'./index.html',
 	'./manifest.json',
-	'/assets/js/OneSignalSDKUpdaterWorker.js',
-	'/assets/js/OneSignalSDKWorker.js',
 	'/assets/js/gets.js',
 	'/assets/js/jquery.js',
 	'/assets/js/IniciarServiceWorker.js',
