@@ -4,7 +4,7 @@
   <head>
 
     <!-- estilo y manifiesto -->
-    <link rel='manifest' href='manifest.json'>
+    <link rel='manifest' href='manifest.webmanifest '>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/w3.css">
 
@@ -17,22 +17,6 @@
     <link rel="icon" href="assets/images/icons/icon-72x72.png">
 
     <!-- scripts -->
-    <!-- Iniciar Service Worker -->
-
-    <script type="text/javascript" src="assets/js/IniciarServiceWorker.js"></script>
-    
-    <!-- Iniciar OneSignal -->
-
-    <script type="text/javascript" src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-    <script>
-      var OneSignal = window.OneSignal || [];
-      OneSignal.push(function() {
-        OneSignal.init({
-          appId: "3949435e-9e55-4e27-b4a7-dc612a0596af",
-        });
-      });
-    </script>
-
     <!-- jQuery -->
     <script type="text/javascript" src="assets/js/jquery.js" ></script> 
 
@@ -50,7 +34,9 @@
 	<header>
     <!-- Top Navigation Menu -->
     <div class="topnav">
-      <a class="active">UADER FCyT</a>
+      <button class="add-button ">Instalar</button>
+      <a class="active">UADER FCyT </a> 
+      
       <!-- Navigation links (hidden by default) -->
       <div id="links">
         <!-- en caso de ser necesario.
@@ -59,6 +45,7 @@
         <a href="#about">About</a>
         -->
       </div>
+
       <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
       <a href="javascript:void(0);" class="icon" onclick="MostrarOcultarMenu()">
         <i class="fa fa-bars"></i>
@@ -72,7 +59,6 @@
 </head>
 
 <body>
-
     <article id="CajaCentral" >
       <div class="w3-container w3-content">
         <p class="w3-opacity CentrarTexto">
@@ -99,9 +85,7 @@
         </div>
     </article>
 
-      
-    <!-- Pie / footer -->
-
+  <!-- Pie / footer -->
 	<footer class="w3-padding-48 w3-center w3-xlarge uader-lightblue">
     <div id="line-footer">	
       <a href="https://www.facebook.com/uaderfcytcdelu/" target="_blank">
@@ -116,7 +100,24 @@
         <a href="http://fcytcdelu.uader.edu.ar/" target="_blank">UADER FCyT</a>
       </p>
     </div>
-	</footer>
+  </footer>
+  <!-- scripts -->
+  <!-- Iniciar Service Worker -->
+  <script type="text/javascript" src="assets/js/IniciarServiceWorker.js"></script>
+
+  <!-- Iniciar Push de FoxPush -->
+
+  <script type="text/javascript" data-cfasync="false">
+    var _foxpush = _foxpush || [];
+    _foxpush.push(['_setDomain', 'anuncios-fcytfirebaseappcom']);
+    (function(){
+        var foxscript = document.createElement('script');
+        foxscript.src = '//cdn.foxpush.net/sdk/foxpush_SDK_min.js';
+        foxscript.type = 'text/javascript';
+        foxscript.async = 'true';
+        var fox_s = document.getElementsByTagName('script')[0];
+        fox_s.parentNode.insertBefore(foxscript, fox_s);})();
+    </script>
 </body>
 
 </html>

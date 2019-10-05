@@ -56,23 +56,22 @@ footer {
 	background-size: 100% 100%;
 	display: block;
 	position: absolute;
-	height: 30%;
-	margin-right: 1%;
-	margin-top: 12px;
-	right: 0;
-	top: 0;
+	height: 1.1em;
+	position: absolute;
+	right: 5px;
+	top: 13px;
   }
   
   /* Add a grey background color on mouse-over */
   .topnav a:hover {
-	background-color: #ececec;
-	color: black;
+	background-color: #ffffff49;
   }
   
   /* Style the active link (or home/logo) */
   .active {
 	background-color: #187eb2;
 	color: white;
+	text-shadow: 2px 2px #1a4986 ;
   } 
 
   /*			Cuerpo				
@@ -147,34 +146,36 @@ footer {
 	width: 50%;
 }
 
-.BotonInstalar {
-	width: 30%;
-	background-color: rgba(230, 230, 230, 0.7);
-	border-bottom: 4px solid #7c7c7c;
-	border-radius: 30px;
-	margin-bottom: 1em;
+.add-button {
+	position: absolute;
+	left: 5px;
+	top: 13px;
+	width: 25%;
+	background-color: #187fb200;
+	border-radius: 5px;
 	text-align: center;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	color: #ffffff;
 }
 
-.BotonInstalar a {
+.add-button a {
 	color: #333;
-	display: block;
-	padding: 0.2em 0 0.2em 0.5em;
 	text-decoration: none;
 	text-align: center;
-	font-size: 3vh;
+	font-size: 2vh;
 }
 
-.BotonInstalar:hover {
-	background-color: #cf1e25;
+.add-button:hover {
+	background-color: #187fb2;
 	color: white;
-	border-bottom: 4px solid #333;
+	border-bottom: 2px solid #333;
 	-webkit-transform: scale(1.01);
 	-moz-transform: scale(1.01);
 	transform: scale(1.01);
+}
+
+#navinstall {
+	text-align: center;
+	color: white;
 }
 
 .CentrarTexto {

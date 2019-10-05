@@ -21,15 +21,11 @@ let Hora1 = '';
 let Anuncio1 = '';
 let Hora2 = '';
 let Anuncio2 = '';
-console.log(HoyEs, ElMesEs);
 
 function ValidarFechaDia(ValidacionFecha, EventoDia){
     if (ElMesEs == '10' && HoyEs =='11' ){
-        console.log('entre');
         this.ValidacionFecha = true;
         this.EventoDia = 1;
-        console.log(this.EventoDia, this.ValidacionFecha);
-
     }
     else if (ElMesEs == 10 && HoyEs == 12 ){
         this.ValidacionFecha = true;
@@ -126,13 +122,11 @@ function AnunciosStand2(){
                     listo = true;
                 }
             }
-            console.log(listo)
             if (listo == true){
                 $('#Anuncio2').html(Anuncio2);
                 $('#Hora2').html(Hora2);
             }
             else{
-                console.log('entro')
                 $('#Anuncio2').html('Cierre del dia 1');
                 $('#Hora2').html(' ');
             }
@@ -185,12 +179,16 @@ function AnunciosStand2(){
 
 ValidarFechaDia(ValidacionFecha, EventoDia);
 
-console.log(this.EventoDia, this.ValidacionFecha);
-
 window.onload = function MostrarAnuncios(){
     if (this.ValidacionFecha == true) {
         AnunciosStand1();
         AnunciosStand2();
+    }
+    else if (ElMesEs == '10' && HoyEs <'11' ){
+        $('#Stand1').html("Visitanos en la Expo Concepcion 2019.");
+        $('#Anuncio1').html("Los dias 11, 12 y 13 de Octubre.");
+        $('#Stand2').html("¿Donde?:");
+        $('#Anuncio2').html('<p>La misma estara emplazada en las instalaciones del Puerto de Concepción del Uruguay.</p><p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13462.015859042987!2d-58.2226956!3d-32.4859569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4902ed6dc4edc01f!2sExpo%20Concepcion%202019!5e0!3m2!1ses-419!2sar!4v1570246267352!5m2!1ses-419!2sar" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe></p>');
     }
     else {
         $('#Anuncio1').html("La expo industrial de C. Del U. ha finalizado.");
