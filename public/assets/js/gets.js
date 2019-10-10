@@ -22,16 +22,23 @@ let Anuncio1 = '';
 let Hora2 = '';
 let Anuncio2 = '';
 
+//Dias en los que se realizara el evento.
+const Dia1 = '18';
+const Dia2 = '19';
+const Dia3 = '20';
+
+// Esta funcion verifica si el usuario se encuentra en uno de los 3 dias del evento.
+// De ser asi almacena el dia correspondiente en una variable (EventoDia), de ser falso, EventoDia sera igual a 0.
 function ValidarFechaDia(ValidacionFecha, EventoDia){
-    if (ElMesEs == '10' && HoyEs =='11' ){
+    if (ElMesEs == '10' && HoyEs == Dia1 ){
         this.ValidacionFecha = true;
         this.EventoDia = 1;
     }
-    else if (ElMesEs == 10 && HoyEs == 12 ){
+    else if (ElMesEs == 10 && HoyEs == Dia2 ){
         this.ValidacionFecha = true;
         this.EventoDia = 2;
         }
-    else if (ElMesEs == 10 && HoyEs == 13 ){
+    else if (ElMesEs == 10 && HoyEs == Dia3 ){
         this.ValidacionFecha = true;
         this.EventoDia = 3;
         }
@@ -40,6 +47,11 @@ function ValidarFechaDia(ValidacionFecha, EventoDia){
         this.EventoDia = 0;
     }
 }
+
+
+// Si la funcion ValidarFechaDia fue previamente ejecutada, y la misma retorno como positiva la ValidacionFecha, junto con el EventoDia
+// Esta funcion recorrera el json con los datos de presentaciones buscando todos aquellos que correspondan al EventoDia respectivo
+// Y mostrara el evento (del stand 1) mas cercano (en cuestion de horario) al usuario.
 
 function AnunciosStand1(){
     let i = 0;
@@ -109,6 +121,10 @@ function AnunciosStand1(){
     }
 }
 
+// Al igual que la funcion anterior, si la funcion ValidarFechaDia fue previamente ejecutada, y la misma retorno como positiva la ValidacionFecha, junto con el EventoDia
+// Esta funcion recorrera el json con los datos de presentaciones buscando todos aquellos que correspondan al EventoDia respectivo
+// Y mostrara el evento (del stand 2) mas cercano (en cuestion de horario) al usuario.
+
 function AnunciosStand2(){
     let i = 0;
     let listo = false;
@@ -177,16 +193,17 @@ function AnunciosStand2(){
     }
 }
 
-ValidarFechaDia(ValidacionFecha, EventoDia);
-
 window.onload = function MostrarAnuncios(){
+    
+    ValidarFechaDia(ValidacionFecha, EventoDia);
+
     if (this.ValidacionFecha == true) {
         AnunciosStand1();
         AnunciosStand2();
     }
-    else if (ElMesEs == '10' && HoyEs <'11' ){
+    else if (ElMesEs == '10' && HoyEs < Dia1 ){
         $('#Stand1').html("Visitanos en la Expo Concepcion 2019.");
-        $('#Anuncio1').html("Los dias 11, 12 y 13 de Octubre.");
+        $('#Anuncio1').html("Los dias 18, 19 y 20 de Octubre.");
         $('#Stand2').html("¿Donde?:");
         $('#Anuncio2').html('<p>La misma estara emplazada en las instalaciones del Puerto de Concepción del Uruguay.</p><p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13462.015859042987!2d-58.2226956!3d-32.4859569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4902ed6dc4edc01f!2sExpo%20Concepcion%202019!5e0!3m2!1ses-419!2sar!4v1570246267352!5m2!1ses-419!2sar" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe></p>');
     }

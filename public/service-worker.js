@@ -1,6 +1,6 @@
 'use strict';
 
-var CACHE = 'Anuncios FCYT v1.1.0';
+var CACHE = 'Anuncios FCYT v1.1.1';
 var urlsToCache = [
 	'./',
 	'./index.html',

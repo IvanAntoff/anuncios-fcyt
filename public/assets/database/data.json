@@ -1,0 +1,28 @@
+{
+	"events": [
+		{
+			"stand": 2,
+			"msg": "Ah! Mira, un ejemplo.",
+			"hora": "11:50",
+			"dia": "2"
+		},
+		{
+			"stand": 1,
+			"msg": "Ejemplo de texto 2",
+			"hora": "20:40",
+			"dia": "2"
+		},
+		{
+			"stand": 1,
+			"msg": "Otro ejemplo mas",
+			"hora": "21:30",
+			"dia": "1"
+		},
+		{
+			"stand": 2,
+			"msg": "Demostración IA",
+			"hora": "16:30",
+			"dia": "1"
+		}
+	]
+}
