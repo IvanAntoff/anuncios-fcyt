@@ -8,7 +8,7 @@ let HoyEs = FechaSistema.getDate();
 let ElMesEs = (FechaSistema.getMonth()+1);
 
 //Obtenemos el la hora y la formateamos.
-let LaHoraEs = (FechaSistema.getHours()+':'+FechaSistema.getMinutes());
+let LaHoraEs = (FechaSistema.getHours()+'.'+FechaSistema.getMinutes());
 
 //Validamos la fecha del evento - 11, 12, 13.
 let ValidacionFecha = false;
@@ -48,7 +48,6 @@ function ValidarFechaDia(ValidacionFecha, EventoDia){
     }
 }
 
-
 // Si la funcion ValidarFechaDia fue previamente ejecutada, y la misma retorno como positiva la ValidacionFecha, junto con el EventoDia
 // Esta funcion recorrera el json con los datos de presentaciones buscando todos aquellos que correspondan al EventoDia respectivo
 // Y mostrara el evento (del stand 1) mas cercano (en cuestion de horario) al usuario.
@@ -56,22 +55,29 @@ function ValidarFechaDia(ValidacionFecha, EventoDia){
 function AnunciosStand1(){
     let i = 0;
     let listo = false;
+    var auxHoraMenor = 'Blanco';
+    EventoDia = `${this.EventoDia}`;
     if (this.EventoDia == 1) {
         $.getJSON('assets/database/data.json',function(data){
             let objetoDB = data.events;     
             for (i = 0; i < objetoDB.length; i++) {
-                if (objetoDB[i].stand == 1 && objetoDB[i].hora >= LaHoraEs) {
-                    Anuncio1 = objetoDB[i].msg;
-                    Hora1 = objetoDB[i].hora;
-                    listo = true;
+                if (EventoDia == objetoDB[i].dia && objetoDB[i].stand == 1 && objetoDB[i].hora >= LaHoraEs) {
+
+                    if (auxHoraMenor === 'Blanco' | objetoDB[i].hora < auxHoraMenor){
+                        auxHoraMenor = objetoDB[i].hora;
+                        Anuncio1 = objetoDB[i].msg;
+                        Hora1 = (objetoDB[i].hora.toFixed(2));
+                        Hora1 = Hora1.toString(2);
+                        listo = true;
+                    }
                 }
             }
             if (listo == true){
                 $('#Anuncio1').html(Anuncio1);
-                $('#Hora1').html(Hora1);
+                $('#Hora1').html(Hora1.replace(".", ":"));
             }
             else {
-                $('#Anuncio1').html('Cierre del dia 1');
+                $('#Anuncio1').html('Estaremos realizando actividades varias hasta el cierre del día 1.<p>Le recomendamos habilitar nuestras notificaciones para estar al tanto de todo.</p>');
                 $('#Hora1').html(' ');
             }
         });
@@ -80,18 +86,22 @@ function AnunciosStand1(){
         $.getJSON('assets/database/data.json',function(data){
             let objetoDB = data.events;     
             for (i = 0; i < objetoDB.length; i++) {
-                if (objetoDB[i].stand == 1 && objetoDB[i].hora >= LaHoraEs) {
-                    Anuncio1 = objetoDB[i].msg;
-                    Hora1 = objetoDB[i].hora;
-                    listo = true;
+                if (EventoDia == objetoDB[i].dia && objetoDB[i].stand == 1 && objetoDB[i].hora >= LaHoraEs) {
+                    if (auxHoraMenor === 'Blanco' | objetoDB[i].hora < auxHoraMenor){
+                        auxHoraMenor = objetoDB[i].hora
+                        Anuncio1 = objetoDB[i].msg;
+                        Hora1 = (objetoDB[i].hora.toFixed(2));
+                        Hora1 = Hora1.toString(2);
+                        listo = true;
+                    }
                 }
             }
             if (listo == true){
                 $('#Anuncio1').html(Anuncio1);
-                $('#Hora1').html(Hora1);
+                $('#Hora1').html(Hora1.replace(".", ":"));
             } 
             else {
-                $('#Anuncio1').html('Cierre del dia 1');
+                $('#Anuncio1').html('Estaremos realizando actividades varias hasta el cierre del día 2.<p>Le recomendamos habilitar nuestras notificaciones para estar al tanto de todo.</p>');
                 $('#Hora1').html(' ');
             }
         });
@@ -100,18 +110,22 @@ function AnunciosStand1(){
         $.getJSON('assets/database/data.json',function(data){
             let objetoDB = data.events;     
             for (i = 0; i < objetoDB.length; i++) {
-                if (objetoDB[i].stand == 1 && objetoDB[i].hora >= LaHoraEs) {
-                    Anuncio1 = objetoDB[i].msg;
-                    Hora1 = objetoDB[i].hora;
-                    listo = true;
+                if (EventoDia == objetoDB[i].dia && objetoDB[i].stand == 1 && objetoDB[i].hora >= LaHoraEs) {
+                    if (auxHoraMenor === 'Blanco' | objetoDB[i].hora < auxHoraMenor){
+                        auxHoraMenor = objetoDB[i].hora
+                        Anuncio1 = objetoDB[i].msg;
+                        Hora1 = (objetoDB[i].hora.toFixed(2));
+                        Hora1 = Hora1.toString(2);
+                        listo = true;
+                    }
                 }
             }
             if (listo == true){
                 $('#Anuncio1').html(Anuncio1);
-                $('#Hora1').html(Hora1);
+                $('#Hora1').html(Hora1.replace(".", ":"));
             }
             else {
-                $('#Anuncio1').html('Cierre del dia 1');
+                $('#Anuncio1').html('Estaremos realizando actividades varias hasta el cierre del día 3.<p>Le recomendamos habilitar nuestras notificaciones para estar al tanto de todo.</p>');
                 $('#Hora1').html(' ');
             }
         });
@@ -128,22 +142,28 @@ function AnunciosStand1(){
 function AnunciosStand2(){
     let i = 0;
     let listo = false;
+    var auxHoraMenor = 'Blanco';
+    EventoDia = `${this.EventoDia}`;
     if (this.EventoDia == 1) {
         $.getJSON('assets/database/data.json',function(data){
             let objetoDB = data.events;     
             for (i = 0; i < objetoDB.length; i++) {
-                if (objetoDB[i].stand == 2 && objetoDB[i].hora >= LaHoraEs) {
-                    Anuncio2 = objetoDB[i].msg;
-                    Hora2 = objetoDB[i].hora;
-                    listo = true;
+                if (EventoDia == objetoDB[i].dia && objetoDB[i].stand == 2 && objetoDB[i].hora >= LaHoraEs) {
+                    if (auxHoraMenor === 'Blanco' | objetoDB[i].hora < auxHoraMenor){
+                        auxHoraMenor = objetoDB[i].hora
+                        Anuncio2 = objetoDB[i].msg;
+                        Hora2 = (objetoDB[i].hora.toFixed(2));
+                        Hora2 = Hora2.toString(2);                        
+                        listo = true;
+                    }
                 }
             }
             if (listo == true){
                 $('#Anuncio2').html(Anuncio2);
-                $('#Hora2').html(Hora2);
+                $('#Hora2').html(Hora2.replace(".", ":"));
             }
             else{
-                $('#Anuncio2').html('Cierre del dia 1');
+                $('#Anuncio2').html('Estaremos realizando actividades varias hasta el cierre del día 1.<p>Le recomendamos habilitar nuestras notificaciones para estar al tanto de todo.</p>');
                 $('#Hora2').html(' ');
             }
         });
@@ -152,18 +172,22 @@ function AnunciosStand2(){
         $.getJSON('assets/database/data.json',function(data){
             let objetoDB = data.events;     
             for (i = 0; i < objetoDB.length; i++) {
-                if (objetoDB[i].stand == 2 && objetoDB[i].hora >= LaHoraEs) {
-                    Anuncio2 = objetoDB[i].msg;
-                    Hora2 = objetoDB[i].hora;
-                    listo = true;
+                if (EventoDia == objetoDB[i].dia && objetoDB[i].stand == 2 && objetoDB[i].hora >= LaHoraEs) {
+                    if (auxHoraMenor === 'Blanco' | objetoDB[i].hora < auxHoraMenor){
+                        auxHoraMenor = objetoDB[i].hora
+                        Anuncio2 = objetoDB[i].msg;
+                        Hora2 = (objetoDB[i].hora.toFixed(2));
+                        Hora2 = Hora2.toString(2);
+                        listo = true;
+                    }
                 }
             }
             if (listo == true){
-                $('#Anuncio2').html(Anuncio1);
-                $('#Hora2').html(Hora1);
+                $('#Anuncio2').html(Anuncio2);
+                $('#Hora2').html(Hora2.replace(".", ":"));
                 }
             else {
-            $('#Anuncio2').html('Cierre del dia 2');
+            $('#Anuncio2').html('Estaremos realizando actividades varias hasta el cierre del día 2.<p>Le recomendamos habilitar nuestras notificaciones para estar al tanto de todo.</p>');
             $('#Hora2').html(' ');
             }
         });
@@ -172,18 +196,22 @@ function AnunciosStand2(){
         $.getJSON('assets/database/data.json',function(data){
             let objetoDB = data.events;     
             for (i = 0; i < objetoDB.length; i++) {
-                if (objetoDB[i].stand == 2 && objetoDB[i].hora >= LaHoraEs) {
-                    Anuncio2 = objetoDB[i].msg;
-                    Hora2 = objetoDB[i].hora;
-                    listo = true;
+                if (EventoDia == objetoDB[i].dia && objetoDB[i].stand == 2 && objetoDB[i].hora >= LaHoraEs) {
+                    if (auxHoraMenor === 'Blanco' | objetoDB[i].hora < auxHoraMenor){
+                        auxHoraMenor = objetoDB[i].hora
+                        Anuncio2 = objetoDB[i].msg;
+                        Hora2 = (objetoDB[i].hora.toFixed(2));
+                        Hora2 = Hora2.toString(2);
+                        listo = true;
+                    }
                 }
             }
             if (listo == true){
                 $('#Anuncio2').html(Anuncio2);
-                $('#Hora2').html(Hora2);
+                $('#Hora2').html(Hora2.replace(".", ":"));
             }
             else {
-                $('#Anuncio2').html('Cierre del dia 3');
+                $('#Anuncio2').html('<p>Estaremos realizando actividades varias hasta el cierre del día 3</p><p>Le recomendamos habilitar nuestras notificaciones para estar al tanto de todo.</p>');
                 $('#Hora2').html(' ');
             }
         });
@@ -205,7 +233,7 @@ window.onload = function MostrarAnuncios(){
         $('#Stand1').html("Visitanos en la Expo Concepcion 2019.");
         $('#Anuncio1').html("Los dias 18, 19 y 20 de Octubre.");
         $('#Stand2').html("¿Donde?:");
-        $('#Anuncio2').html('<p>La misma estara emplazada en las instalaciones del Puerto de Concepción del Uruguay.</p><p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13462.015859042987!2d-58.2226956!3d-32.4859569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4902ed6dc4edc01f!2sExpo%20Concepcion%202019!5e0!3m2!1ses-419!2sar!4v1570246267352!5m2!1ses-419!2sar" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe></p>');
+        $('#Anuncio2').html('<p>La misma estara emplazada en las instalaciones del Puerto de Concepción del Uruguay.</p><p><iframe title="MapaDelEvento" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13462.015859042987!2d-58.2226956!3d-32.4859569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4902ed6dc4edc01f!2sExpo%20Concepcion%202019!5e0!3m2!1ses-419!2sar!4v1570246267352!5m2!1ses-419!2sar" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe></p>');
     }
     else {
         $('#Anuncio1').html("La expo industrial de C. Del U. ha finalizado.");

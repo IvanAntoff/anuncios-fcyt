@@ -1,28 +1,93 @@
 {
 	"events": [
 		{
-			"stand": 2,
-			"msg": "Ah! Mira, un ejemplo.",
-			"hora": "11:50",
-			"dia": "2"
-		},
-		{
 			"stand": 1,
-			"msg": "Ejemplo de texto 2",
-			"hora": "20:40",
-			"dia": "2"
-		},
-		{
-			"stand": 1,
-			"msg": "Otro ejemplo mas",
-			"hora": "21:30",
+			"msg": "Inicio de las actividades.",
+			"hora": 10.00,
 			"dia": "1"
 		},
 		{
 			"stand": 2,
-			"msg": "Demostración IA",
-			"hora": "16:30",
+			"msg": "Inicio de las actividades.",
+			"hora": 10.00,
 			"dia": "1"
+		},
+		{
+			"stand": 1,
+			"msg": "Inicio de las actividades.",
+			"hora": 10.00,
+			"dia": "2"
+		},
+		{
+			"stand": 2,
+			"msg": "Inicio de las actividades.",
+			"hora": 10.00,
+			"dia": "2"
+		},		{
+			"stand": 1,
+			"msg": "Inicio de las actividades.",
+			"hora": 10.00,
+			"dia": "3"
+		},
+		{
+			"stand": 2,
+			"msg": "Inicio de las actividades.",
+			"hora": 10.00,
+			"dia": "3"
+		},
+		{
+			"stand": 1,
+			"msg": "Visita de la Rama del IEEE FCyT UADER.<p>Hasta: 17:00</p>",
+			"hora": 12.00,
+			"dia": "1"
+		},
+		{
+			"stand": 1,
+			"msg": "<p>El valor de los Datos.</p><p>Prof. Daniel Gering.</p>",
+			"hora": 16.30,
+			"dia": "1"
+		},
+		{
+			"stand": 1,
+			"msg": "<p>Hacia una economía más colaborativa y circular.</p><p>Lic. Belén Gómez.</p>",
+			"hora": 18.30,
+			"dia": "1"
+		},
+		{
+			"stand": 1,
+			"msg": "Visita del Dr. José Eduardo Lauritto.",
+			"hora": 15.00,
+			"dia": "2"
+		},
+		{
+			"stand": 1,
+			"msg": "Visita de la Rama del IEEE FCyT UADER.<p>Hasta: 17:00</p>",
+			"hora": 15.30,
+			"dia": "2"
+		},
+		{
+			"stand": 1,
+			"msg": "<p>Mejoras de los procesos de negocios mediante el uso de tecnologías.</p><p>Lic. Marcelo Ceballos.</p>",
+			"hora": 18.00,
+			"dia": "2"
+		},
+		{
+			"stand": 1,
+			"msg": "<p>Millennials: Rediografía de una generación.</p><p>Camilo Arletazz.</p>",
+			"hora": 19.30,
+			"dia": "2"
+		},
+		{
+			"stand": 1,
+			"msg": "<p>Mesa: mujeres emprendedoras.</p><p>Ileana Fernández.</p>",
+			"hora": 16.00,
+			"dia": "3"
+		},
+		{
+			"stand": 1,
+			"msg": "<p>Entrenando nuestro cerebro para alcanzar bienestar: Un desafío posible.</p><p>Lic. Martín Reynoso.</p>",
+			"hora": 18.00,
+			"dia": "3"
 		}
 	]
 }
