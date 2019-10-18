@@ -1,7 +1,7 @@
 {
   "name": "Anuncios FCYT",
   "short_name": "Anuncios FCYT",
-  "theme_color": "#187eb2",
+  "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "display": "fullscreen",
   "orientation": "portrait",
@@ -34,7 +34,7 @@
       "type": "image/png"
     },
     {
-      "src": "assets/images/icons/icon-192x192.png",
+      "src": "assets/images/icons/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
@@ -44,18 +44,11 @@
       "type": "image/png"
     },
     {
-      "src": "assets/images/icons/icon-512x512.png",
+      "src": "assets/images/icons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
   "splash_pages": "assets/images/icons/icon-192x192.png",
-  "prefer_related_applications": true,
-  "related_applications": [
-  {
-    "platform": "play",
-    "id": "com.google.anuncios-fcyt.apps.iosched"
-  }
-]
-
+  "prefer_related_applications": true
 }

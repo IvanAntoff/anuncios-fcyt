@@ -14,15 +14,16 @@ if ('serviceWorker' in navigator) {
 	});
 }
 
-// Code to handle install prompt on desktop
-
 let deferredPrompt;
 const addBtn = document.querySelector('.add-button');
 const titulo = document.querySelector('.active');
 
+addBtn.style.display = 'block';
+titulo.style.textAlign = 'center';
+/*
 addBtn.style.display = 'none';
 titulo.style.textAlign = 'left';
-
+*/
 
 window.addEventListener('beforeinstallprompt', (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt

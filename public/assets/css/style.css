@@ -150,7 +150,7 @@ footer {
 	position: absolute;
 	left: 5px;
 	top: 13px;
-	width: 25%;
+	width: 5em;
 	background-color: #187fb200;
 	border-radius: 5px;
 	text-align: center;
@@ -181,3 +181,9 @@ footer {
 .CentrarTexto {
 	text-align: center;
 }
+
+@font-face {
+	font-family: 'Arvo';
+	font-display: auto;
+	src: local('Arvo'), url(https://fonts.gstatic.com/s/arvo/v9/rC7kKhY-eUDY-ucISTIf5PesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  }
